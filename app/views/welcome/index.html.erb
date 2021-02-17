@@ -1,0 +1,14 @@
+<%= turbo_frame_tag 'breadcrumbs' do %>
+  Breadcrumbs
+<%- end %>
+
+<p>Hi there.</p>
+
+<%= turbo_frame_tag 'primary' do %>
+
+This is the inner area.
+
+<%= link_to "History", history_welcome_path(format: :turbo_stream) %>
+
+<%- end %>
+
