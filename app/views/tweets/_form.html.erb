@@ -1,0 +1,19 @@
+
+<%= form_with(model: tweet, id: tweet.new_record? ? dom_id(tweet) : nil) do |f| %>
+
+  <% if @tweet.errors.present? %>
+    <ul class="form-errors">
+      <% @tweet.errors.full_messages.each do |m| %>
+        <li><%= m %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <%= f.submit tweet.persisted? ? "Update Tweet" : "Create Tweet" %>
+
+<% end %>

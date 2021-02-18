@@ -1,14 +1,11 @@
-<%= turbo_frame_tag 'breadcrumbs' do %>
+<div id="breadcrumbs">
   Breadcrumbs
-<%- end %>
+</div>
 
 <p>Hi there.</p>
 
-<%= turbo_frame_tag 'primary' do %>
+<div id="inner-area">
+  This is the inner area before an update.
+</div>
 
-This is the inner area.
-
-<%= link_to "History", history_welcome_path(format: :turbo_stream) %>
-
-<%- end %>
-
+<%= link_to "History", history_welcome_path %>
